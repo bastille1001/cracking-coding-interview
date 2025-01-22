@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cracking.Coding.Interview", "Cracking.Coding.Interview\Cracking.Coding.Interview.csproj", "{B60872AD-8AB9-460F-AFE9-0657CC2FC02D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B60872AD-8AB9-460F-AFE9-0657CC2FC02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B60872AD-8AB9-460F-AFE9-0657CC2FC02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B60872AD-8AB9-460F-AFE9-0657CC2FC02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B60872AD-8AB9-460F-AFE9-0657CC2FC02D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BC31054-EE00-4BAB-96D7-B5F6978A7C87}
+	EndGlobalSection
+EndGlobal
