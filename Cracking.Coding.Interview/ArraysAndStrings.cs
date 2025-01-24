@@ -76,7 +76,7 @@
             return true;
         }
 
-        // <summary>
+        /// <summary>
         /// Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
         /// </summary>
         /// <param name="word"></param>
@@ -105,9 +105,42 @@
             return true;
         }
 
-        public static string URLify(string input)
+        /// <summary>
+        /// Group Anagrams: Given an array of strings strs, group all anagrams together into sublists.
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public static List<List<string>> GroupAnagrams(string[] strs)
         {
-            return input.TrimEnd().Replace(" ", "%20");
+            var res = new Dictionary<string, List<string>>();
+
+            foreach (var s in strs)
+            {
+                int[] count = new int[26];
+
+                foreach (var c in s)
+                {
+                    count[c - 'a']++;
+                }
+
+                var key = string.Join(",", count);
+
+                if (!res.TryGetValue(key, out List<string>? value))
+                {
+                    value = [];
+                    res[key] = value;
+                }
+
+                value.Add(s);
+            }
+
+            var result = new List<List<string>>();
+            foreach (var group in res.Values)
+            {
+                result.Add(group);
+            }
+
+            return result;
         }
     }
 }
