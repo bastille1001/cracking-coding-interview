@@ -142,5 +142,32 @@
 
             return result;
         }
+
+        /// <summary>
+        /// Given an array of integers nums, return the length of the longest consecutive sequence of elements that can be formed.
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public static int LongestConsecutive(int[] nums)
+        {
+            var numSet = new HashSet<int>(nums);
+            int longest = 0;
+
+            foreach (var num in numSet)
+            {
+                if (!numSet.Contains(num - 1))
+                {
+                    int length = 1;
+                    while (numSet.Contains(num + length))
+                    {
+                        length++;
+                    }
+
+                    longest = Math.Max(longest, length);
+                }
+            }
+
+            return longest;
+        }
     }
 }
