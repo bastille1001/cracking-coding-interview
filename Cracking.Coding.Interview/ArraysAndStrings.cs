@@ -110,9 +110,9 @@
         /// </summary>
         /// <param name="word"></param>
         /// <returns></returns>
-        public static List<List<string>> GroupAnagrams(string[] strs)
+        public static IList<IList<string>> GroupAnagrams(string[] strs)
         {
-            var res = new Dictionary<string, List<string>>();
+            var res = new Dictionary<string, IList<string>>();
 
             foreach (var s in strs)
             {
@@ -125,7 +125,7 @@
 
                 var key = string.Join(",", count);
 
-                if (!res.TryGetValue(key, out List<string>? value))
+                if (!res.TryGetValue(key, out IList<string>? value))
                 {
                     value = [];
                     res[key] = value;
@@ -134,7 +134,7 @@
                 value.Add(s);
             }
 
-            var result = new List<List<string>>();
+            IList<IList<string>> result = (IList<IList<string>>)new List<List<string>>();
             foreach (var group in res.Values)
             {
                 result.Add(group);
